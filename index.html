@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Mudofaa Vazirligi | Harbiy kasbiy saralash</title>
-   <link rel="icon" type="image/x-icon" href="123.png">
+  <link rel="icon" type="image/x-icon" href="123.png">
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
@@ -115,6 +115,7 @@
     .emblem-img {
       width: 70px;
       height: auto;
+      animation: emblemGlow 3s ease-in-out infinite; /* Logotipga yonib-o'chadigan soya */
     }
 
     .emblem-img img {
@@ -126,6 +127,25 @@
       padding: 5px;
       border: 2px solid #00cc99;
       box-shadow: 0 0 15px #00ffc3;
+    }
+
+    /* Logotip uchun yonib-o'chadigan soya animatsiyasi */
+    @keyframes emblemGlow {
+      0% {
+        filter: drop-shadow(0 0 5px #00ffc3);
+      }
+      25% {
+        filter: drop-shadow(0 0 15px #00ffff);
+      }
+      50% {
+        filter: drop-shadow(0 0 25px #00ffaa);
+      }
+      75% {
+        filter: drop-shadow(0 0 15px #00ffff);
+      }
+      100% {
+        filter: drop-shadow(0 0 5px #00ffc3);
+      }
     }
 
     .title h1 {
@@ -250,7 +270,7 @@
       animation: glowPulse 2.5s ease-in-out infinite;
     }
 
-    /* Har bir kartochka uchun turli xil tezlik va rang */
+    /* Har bir kartochka uchun turli xil tezlik */
     .social-card:nth-child(1) { /* Telegram */
       animation: glowPulse 2.2s ease-in-out infinite;
     }
@@ -265,6 +285,10 @@
     
     .social-card:nth-child(4) { /* Veb-sayt */
       animation: glowPulse 2.9s ease-in-out infinite 0.9s;
+    }
+    
+    .social-card:nth-child(5) { /* ARIZA BERISH */
+      animation: glowPulse 2.3s ease-in-out infinite 0.2s;
     }
 
     /* SOYA YONIB-O'CHISH ANIMATSIYASI */
@@ -313,6 +337,22 @@
     .social-card .name a {
       color: inherit;
       text-decoration: none;
+    }
+
+    /* ARIZA BERISH uchun maxsus rasm (321.png) */
+    .social-card .custom-icon {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .social-card .custom-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 0 8px #88ffaa);
     }
 
     /* Telefon kartasi */
@@ -469,6 +509,11 @@
         width: 35px;
       }
       
+      .social-card .custom-icon {
+        width: 35px;
+        height: 35px;
+      }
+      
       .social-card .name {
         font-size: 1.1rem;
       }
@@ -520,7 +565,7 @@
 <body>
   <div class="modern-defense-card">
 
-    <!-- HEADER -->
+    <!-- HEADER - Logotip yonib-o'chadi -->
     <div class="emblem-header">
       <div class="emblem-img">
         <img src="123.png" width="120" alt="Gerf">
@@ -537,8 +582,7 @@
     <div class="main-content">
       
       <!-- 1. RASMIY VEB SAYT -->
-      <div class="official-web-block">
-        <!--  -->
+      
 
       <!-- 2. TELEGRAM - YONIB-O'CHADI -->
       <div class="social-card">
@@ -563,8 +607,16 @@
         <i class="fas fa-globe" style="color: #88ffaa;"></i>
         <div class="name"><a href="https://army.gov.uz">VEB-SAYT</a></div>
       </div>
+      
+      <!-- 6. ARIZA BERISH - 321.png rasm bilan, Telegram ikonkasidek o'lchamda -->
+      <div class="social-card" style="background: rgba(0, 40, 55, 0.98);">
+        <div class="custom-icon">
+          <img src="321.png" alt="Ariza icon">
+        </div>
+        <div class="name"><a href="https://my.gov.uz/uz/service/1193">ARIZA BERISH</a></div>
+      </div>
 
-      <!-- 6. TELEFON KARTASI -->
+      <!-- 7. TELEFON KARTASI -->
       <div class="phone-special-card">
         <div class="phone-icon-big">
           <i class="fas fa-headset"></i>
@@ -586,9 +638,7 @@
     <div class="security-footer">
       <span><i class="fas fa-lock"></i> Rasmiy veb-sayt | Barcha ma'lumotlar himoyalangan</span>
       <span><i class="fas fa-code"></i> powered by ®Fuugo</span>
-      <div class="footer-phone-row">
-       
-      </div>
+      <div class="footer-phone-row"></div>
     </div>
 
   </div> <!-- .modern-defense-card -->

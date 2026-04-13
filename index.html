@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Mudofaa Vazirligi | Harbiy kasbiy saralash</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Mudofaa Vazirligi | Harbiy kasbiy saralash | Sifrovizatsiya</title>
   <link rel="icon" type="image/x-icon" href="123.png">
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -22,8 +22,6 @@
       align-items: center;
       justify-content: center;
       padding: 0.5rem;
-      
-      /* SIFROVIZATSIYA FONI */
       background: #0a0f1f;
       position: relative;
       overflow: hidden;
@@ -45,338 +43,282 @@
       pointer-events: none;
     }
 
-    /* Kriptografik matnlar */
     body::after {
-      content: "ENCRYPTED SECURE CLASSIFIED CIPHER AES RSA SHA256 • ENCRYPTED SECURE CLASSIFIED CIPHER AES RSA SHA256 • ";
+      content: "🔐 ENCRYPTED • SECURE • CLASSIFIED • CIPHER • AES • RSA • SHA256 • 🔐";
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      color: rgba(0, 255, 200, 0.1);
-      font-size: 14px;
+      color: rgba(0, 255, 200, 0.08);
+      font-size: 12px;
       font-family: 'Courier New', monospace;
       white-space: nowrap;
       overflow: hidden;
-      line-height: 50px;
-      transform: rotate(-3deg) scale(1.2);
+      line-height: 40px;
+      transform: rotate(-4deg) scale(1.3);
       z-index: 0;
       pointer-events: none;
-      animation: scrollText 50s linear infinite;
+      animation: scrollCipher 45s linear infinite;
     }
 
-    @keyframes scrollText {
-      0% { transform: rotate(-3deg) translateX(-10%) scale(1.2); }
-      100% { transform: rotate(-3deg) translateX(-50%) scale(1.2); }
+    @keyframes scrollCipher {
+      0% { transform: rotate(-4deg) translateX(-8%) scale(1.3); }
+      100% { transform: rotate(-4deg) translateX(-50%) scale(1.3); }
     }
 
     /* Asosiy karta */
     .modern-defense-card {
       max-width: 450px;
       width: 100%;
-      height: 98vh;
-      height: 98dvh;
-      background: rgba(5, 15, 30, 0.95);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      height: 96vh;
+      height: 96dvh;
+      background: rgba(5, 15, 30, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border-radius: 2rem;
-      box-shadow: 0 40px 70px -20px #000000, 0 0 0 2px rgba(0, 255, 200, 0.3);
-      border: 1px solid rgba(0, 255, 200, 0.4);
+      box-shadow: 0 40px 70px -20px #000, 0 0 0 2px rgba(0, 255, 200, 0.35);
+      border: 1px solid rgba(0, 255, 200, 0.5);
       overflow-y: auto;
       overflow-x: hidden;
       position: relative;
       z-index: 10;
       display: flex;
       flex-direction: column;
+      scrollbar-width: thin;
     }
 
     .modern-defense-card::-webkit-scrollbar {
       width: 3px;
       background: transparent;
     }
-    
     .modern-defense-card::-webkit-scrollbar-thumb {
-      background: rgba(0, 255, 200, 0.3);
+      background: #00cc99;
       border-radius: 10px;
     }
 
     /* Header */
     .emblem-header {
       background: linear-gradient(145deg, #071a2e, #051524);
-      padding: 1.2rem 1rem 1rem;
+      padding: 1rem 1rem 0.8rem;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       gap: 0.5rem;
-      border-bottom: 4px solid #00cc99;
+      border-bottom: 3px solid #00cc99;
       flex-shrink: 0;
     }
 
     .emblem-img {
       width: 70px;
-      height: auto;
-      animation: emblemGlow 3s ease-in-out infinite;
+      /* animation: emblemPulse 2.5s ease-in-out infinite; */
     }
-
     .emblem-img img {
       width: 100%;
-      height: auto;
-      display: block;
       border-radius: 50%;
       background: rgba(0, 255, 200, 0.1);
       padding: 5px;
       border: 2px solid #00cc99;
-      box-shadow: 0 0 15px #00ffc3;
+      box-shadow: 0 0 20px #00ffc3;
     }
-
-    /* Logotip uchun yonib-o'chadigan soya animatsiyasi */
-    @keyframes emblemGlow {
-      0% {
-        filter: drop-shadow(0 0 5px #00ffc3);
-      }
-      25% {
-        filter: drop-shadow(0 0 15px #00ffff);
-      }
-      50% {
-        filter: drop-shadow(0 0 25px #00ffaa);
-      }
-      75% {
-        filter: drop-shadow(0 0 15px #00ffff);
-      }
-      100% {
-        filter: drop-shadow(0 0 5px #00ffc3);
-      }
+    @keyframes emblemPulse {
+      0% { filter: drop-shadow(0 0 3px #00ffc3); transform: scale(1);}
+      50% { filter: drop-shadow(0 0 18px #00ffaa); transform: scale(1.02);}
+      100% { filter: drop-shadow(0 0 3px #00ffc3); transform: scale(1);}
     }
 
     .title h1 {
-      font-size: 0.95rem;
-      font-weight: 700;
+      font-size: 0.9rem;
+      font-weight: 800;
       line-height: 1.2;
       text-transform: uppercase;
-      color: #ffffff;
-      text-shadow: 0 0 5px #00ffc3;
+      color: #fff;
+      text-shadow: 0 0 6px #00ffc3;
     }
-
     .title h1 span {
       display: block;
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       font-weight: 400;
       letter-spacing: 1px;
-      margin-top: 0.3rem;
-      color: #aaffdd;
-      text-transform: none;
+      margin-top: 0.2rem;
+      color: #bbffee;
       border-top: 1px dashed #00cc99;
-      padding-top: 0.3rem;
+      padding-top: 0.25rem;
     }
 
-    /* MAIN CONTENT - flex-grow bilan to'ldiriladi */
+    /* MAIN CONTENT */
     .main-content {
-      padding: 0.8rem 1rem;
+      padding: 1rem 1rem;
       display: flex;
       flex-direction: column;
       gap: 1rem;
       flex: 1 0 auto;
-      overflow-y: auto;
     }
 
-    /* RASMIY VEB SAYT */
-    .official-web-block {
-      background: rgba(0, 20, 40, 0.95);
-      border: 2px solid #00cc99;
-      border-radius: 1.5rem;
-      padding: 1.2rem 1rem;
-      text-align: center;
-      box-shadow: 0 0 20px rgba(0, 255, 200, 0.2);
-    }
-
-    .web-icon-large {
-      background: #0a2a3a;
-      width: 60px;
-      height: 60px;
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 0.8rem;
-      border: 2px solid #00ffc3;
-      box-shadow: 0 0 12px #00ffc3;
-    }
-
-    .web-icon-large i {
-      font-size: 2rem;
-      color: #8cfff0;
-    }
-
-    .official-web-block h3 {
-      font-size: 0.9rem;
-      letter-spacing: 2px;
-      color: #aaffdd;
-      margin-bottom: 0.3rem;
-    }
-
-    .web-title {
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: #ffffff;
-      line-height: 1.2;
-      margin: 0.2rem 0 0.3rem;
-      text-shadow: 0 0 10px #00ffc3;
-    }
-
-    .web-description {
-      color: #ccffff;
-      font-size: 0.85rem;
-      margin-bottom: 1rem;
-    }
-
-    .web-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: #0a2e45;
-      color: white;
-      padding: 0.6rem 1.5rem;
-      border-radius: 40px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-decoration: none;
-      border: 2px solid #00ffc3;
-      box-shadow: 0 0 12px #00ffc3;
-      transition: transform 0.1s ease;
-    }
-
-    .web-link:active {
-      transform: scale(0.92);
-    }
-
-    .web-link:not(:active) {
-      transition: transform 0.2s ease;
-    }
-
-    /* SOCIAL CARDS - YONIB-O'CHIB TURADIGAN SOYA */
-    .social-card {
-      background: rgba(0, 25, 45, 0.98);
+    /* ========== BUTTON STYLE (Barcha tugmalar) ========== */
+    /* Asosiy tugma uslubi - butun maydon bosiladigan qilib */
+    .action-button {
+      background: rgba(0, 25, 45, 0.96);
+      backdrop-filter: blur(4px);
       border: 2px solid #00aaff;
-      border-radius: 1.5rem;
+      border-radius: 2rem;
       padding: 1rem 1.2rem;
       display: flex;
       align-items: center;
       gap: 1rem;
-      box-shadow: 0 0 15px rgba(0, 200, 255, 0.3);
-      transition: all 0.2s ease;
       cursor: pointer;
-      
-      /* YONIB-O'CHIB TURADIGAN SOYA ANIMATSIYASI */
-      animation: glowPulse 2.5s ease-in-out infinite;
+      transition: all 0.2s ease;
+      box-shadow: 0 0 15px rgba(0, 200, 255, 0.2);
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      /* Yonib turuvchi asos effekt */
+      animation: buttonSoftGlow 2.8s ease-in-out infinite;
     }
 
-    /* Har bir kartochka uchun turli xil tezlik */
-    .social-card:nth-child(1) { /* Telegram */
-      animation: glowPulse 2.2s ease-in-out infinite;
-    }
-    
-    .social-card:nth-child(2) { /* Instagram */
-      animation: glowPulse 2.7s ease-in-out infinite 0.3s;
-    }
-    
-    .social-card:nth-child(3) { /* YouTube */
-      animation: glowPulse 2.4s ease-in-out infinite 0.6s;
-    }
-    
-    .social-card:nth-child(4) { /* Veb-sayt */
-      animation: glowPulse 2.9s ease-in-out infinite 0.9s;
-    }
-    
-    .social-card:nth-child(5) { /* ARIZA BERISH */
-      animation: glowPulse 2.3s ease-in-out infinite 0.2s;
-    }
+    /* Har bir tugma uchun turli vaqtda yonish */
+    .action-button:nth-child(1) { animation: buttonSoftGlow 2.2s infinite; }
+    .action-button:nth-child(2) { animation: buttonSoftGlow 2.7s infinite 0.3s; }
+    .action-button:nth-child(3) { animation: buttonSoftGlow 2.4s infinite 0.6s; }
+    .action-button:nth-child(4) { animation: buttonSoftGlow 3.0s infinite 0.9s; }
+    .action-button:nth-child(5) { animation: buttonSoftGlow 2.5s infinite 0.2s; }
 
-    /* SOYA YONIB-O'CHISH ANIMATSIYASI */
-    @keyframes glowPulse {
+    @keyframes buttonSoftGlow {
       0% {
-        box-shadow: 0 0 10px rgba(0, 200, 255, 0.3), 0 0 20px rgba(0, 255, 200, 0.1);
+        box-shadow: 0 0 8px rgba(0, 200, 255, 0.3);
         border-color: #00aaff;
-      }
-      25% {
-        box-shadow: 0 0 20px #00ffff, 0 0 40px #00ccff;
-        border-color: #88ffff;
       }
       50% {
-        box-shadow: 0 0 30px #00ffaa, 0 0 60px #00ffcc;
-        border-color: #ffffff;
-      }
-      75% {
-        box-shadow: 0 0 20px #00ffff, 0 0 40px #00ccff;
-        border-color: #88ffff;
+        box-shadow: 0 0 22px #00ffc3, 0 0 30px #00ccff;
+        border-color: #aaffee;
       }
       100% {
-        box-shadow: 0 0 10px rgba(0, 200, 255, 0.3), 0 0 20px rgba(0, 255, 200, 0.1);
+        box-shadow: 0 0 8px rgba(0, 200, 255, 0.3);
         border-color: #00aaff;
       }
     }
 
-    .social-card:active {
-      transform: scale(0.97);
+    /* YONIB UCHISH (IGNITION) ANIMATSIYASI - ketma-ketlikda yonadi */
+    @keyframes igniteBlast {
+      0% {
+        box-shadow: 0 0 0px rgba(0, 255, 200, 0);
+        border-color: #00aaff;
+        background: rgba(0, 25, 45, 0.96);
+        transform: scale(1);
+      }
+      20% {
+        box-shadow: 0 0 18px #ffaa33, 0 0 38px #ff7722;
+        border-color: #ffcc66;
+        background: rgba(50, 35, 15, 0.98);
+        transform: scale(0.98);
+      }
+      45% {
+        box-shadow: 0 0 35px #00ffc3, 0 0 55px #00ffaa;
+        border-color: #ffffaa;
+        background: rgba(0, 70, 90, 0.98);
+        transform: scale(1.01);
+      }
+      75% {
+        box-shadow: 0 0 45px #88ffdd, 0 0 70px #00ffcc;
+        border-color: #ffffff;
+        background: rgba(0, 55, 80, 0.98);
+      }
+      100% {
+        box-shadow: 0 0 25px #00ffc3, 0 0 35px #00ffaa;
+        border-color: #00ffc3;
+        background: rgba(0, 45, 70, 0.96);
+        transform: scale(1);
+      }
     }
 
-    .social-card i {
+    @keyframes iconExplode {
+      0% { transform: scale(1); text-shadow: 0 0 0px cyan; filter: drop-shadow(0 0 2px #00ffc3);}
+      30% { transform: scale(1.35); text-shadow: 0 0 18px #ffee88; filter: drop-shadow(0 0 15px #ffaa44);}
+      70% { transform: scale(1.1); text-shadow: 0 0 22px #00ffdd; filter: drop-shadow(0 0 12px #00ffc3);}
+      100% { transform: scale(1); text-shadow: 0 0 12px #00ffc3; filter: drop-shadow(0 0 8px #00ffc3);}
+    }
+
+    .action-button.ignite-active {
+      animation: igniteBlast 0.7s cubic-bezier(0.25, 1.2, 0.4, 1) forwards;
+      pointer-events: none;
+    }
+
+    .action-button.ignite-active i,
+    .action-button.ignite-active .button-icon,
+    .action-button.ignite-active .custom-icon-img {
+      animation: iconExplode 0.6s ease forwards;
+    }
+
+    /* Ikonka va matn */
+    .action-button i {
       font-size: 2.2rem;
-      color: #88ffe1;
-      width: 45px;
+      width: 48px;
       text-align: center;
-      filter: drop-shadow(0 0 5px #00ffc3);
+      color: #88ffe1;
+      filter: drop-shadow(0 0 6px #00ffc3);
+      transition: all 0.1s;
     }
 
-    .social-card .name {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #ffffff;
-      text-shadow: 0 0 8px #00ffc3;
-    }
-
-    .social-card .name a {
-      color: inherit;
-      text-decoration: none;
-      display: block;
-      width: 100%;
-    }
-
-    /* ARIZA BERISH uchun maxsus rasm (321.png) */
-    .social-card .custom-icon {
-      width: 45px;
-      height: 45px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .social-card .custom-icon img {
-      width: 100%;
-      height: 100%;
+    .custom-icon-img {
+      width: 44px;
+      height: 44px;
       object-fit: contain;
       filter: drop-shadow(0 0 8px #88ffaa);
     }
 
-    /* Telefon kartasi */
-    .phone-special-card {
+    .button-text {
+      flex: 1;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-shadow: 0 0 8px #00ffc3;
+      letter-spacing: 0.5px;
+    }
+    .button-text small {
+      font-size: 0.7rem;
+      font-weight: 400;
+      color: #bbffee;
+      display: block;
+      margin-top: 2px;
+    }
+
+    /* TELEFON KARTASI (ham bosiladigan butun maydon) */
+    .phone-card {
       background: rgba(0, 30, 50, 0.98);
       border: 3px solid #00ccaa;
-      border-radius: 1.8rem;
-      padding: 1.2rem 1rem;
+      border-radius: 2rem;
+      padding: 1rem 1rem;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      box-shadow: 0 0 25px #00ccaa;
-      transition: transform 0.1s ease;
+      gap: 0.8rem;
       cursor: pointer;
-      margin-bottom: 0.5rem;
+      transition: all 0.1s ease;
+      margin-top: 0.2rem;
+      animation: phoneGlow 3s infinite;
+      position: relative;
+      overflow: hidden;
+    }
+    @keyframes phoneGlow {
+      0% { box-shadow: 0 0 10px #00ccaa; border-color: #00ccaa; }
+      50% { box-shadow: 0 0 30px #88ffdd; border-color: #aaffee; }
+      100% { box-shadow: 0 0 10px #00ccaa; border-color: #00ccaa; }
+    }
+    .phone-card.ignite-active {
+      animation: igniteBlast 0.7s cubic-bezier(0.25, 1.2, 0.4, 1) forwards;
+      pointer-events: none;
+    }
+    .phone-card.ignite-active .phone-icon-big,
+    .phone-card.ignite-active .call-btn {
+      animation: iconExplode 0.6s ease forwards;
     }
 
-    .phone-special-card:active {
-      transform: scale(0.97);
+    .phone-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
-
     .phone-icon-big {
       background: #00a38c;
       width: 60px;
@@ -388,266 +330,261 @@
       font-size: 2rem;
       color: #001a1a;
       border: 2px solid #aaffee;
-      box-shadow: 0 0 15px #88ffee;
+      box-shadow: 0 0 18px #88ffee;
     }
-
     .phone-details {
       text-align: center;
-      width: 100%;
     }
-
-    .phone-details .phone-label {
+    .phone-label {
       text-transform: uppercase;
       font-weight: 600;
-      letter-spacing: 1.5px;
+      letter-spacing: 2px;
       color: #88ffdd;
-      font-size: 0.75rem;
-      text-shadow: 0 0 5px #00ffc3;
+      font-size: 0.7rem;
     }
-
-    .phone-details .big-phone {
+    .big-phone-number {
       font-size: 1.3rem;
-      font-weight: 700;
-      color: #ffffff;
-      white-space: normal;
-      word-break: break-word;
+      font-weight: 800;
+      color: white;
       text-shadow: 0 0 10px #00ffc3;
     }
-
-    .big-phone i {
-      color: #88ffdd;
-      margin-left: 5px;
-    }
-
-    .call-us-btn {
+    .call-btn {
       background: #0f3a4a;
       color: white;
-      padding: 0.7rem 1.2rem;
-      border-radius: 40px;
+      padding: 0.7rem 1rem;
+      border-radius: 60px;
       font-weight: 600;
       font-size: 1rem;
-      display: flex;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 10px;
       border: 2px solid #00ffc3;
-      box-shadow: 0 0 12px #00ffc3;
+      box-shadow: 0 0 15px #00ffc3;
       width: 100%;
-      transition: transform 0.1s ease;
-      text-decoration: none;
       cursor: pointer;
-    }
-
-    .call-us-btn:active {
-      transform: scale(0.94);
+      transition: 0.1s;
     }
 
     /* FOOTER */
     .security-footer {
       background: rgba(0, 10, 25, 0.98);
-      padding: 0.8rem 1rem;
+      padding: 0.7rem 1rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.4rem;
       text-align: center;
       color: #aaffdd;
       border-top: 2px solid #00cc99;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       flex-shrink: 0;
-      width: 100%;
-      margin-top: auto;
     }
-
-    .footer-phone-row {
+    .footer-badge {
       display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-      width: 100%;
-    }
-
-    .footer-phone-row span {
-      display: flex;
-      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 0.4rem;
-      font-size: 0.8rem;
     }
 
-    .footer-phone-row i {
-      color: #88ffdd;
-      width: 18px;
-    }
-
-    /* IPHONE SE */
-    @media (max-width: 380px) {
-      body {
-        padding: 0.3rem;
-      }
-      
-      .modern-defense-card {
-        border-radius: 1.5rem;
-      }
-      
-      .emblem-img {
-        width: 60px;
-      }
-      
-      .title h1 {
-        font-size: 0.85rem;
-      }
-      
-      .title h1 span {
-        font-size: 0.6rem;
-      }
-      
-      .main-content {
-        gap: 0.9rem;
-        padding: 0.6rem 0.8rem;
-      }
-      
-      .social-card {
-        padding: 0.8rem 0.8rem;
-        gap: 0.8rem;
-      }
-      
-      .social-card i {
+    @media (max-width: 400px) {
+      .action-button i {
         font-size: 1.8rem;
-        width: 35px;
+        width: 40px;
       }
-      
-      .social-card .custom-icon {
-        width: 35px;
-        height: 35px;
-      }
-      
-      .social-card .name {
+      .button-text {
         font-size: 1.1rem;
       }
-      
-      .web-icon-large {
-        width: 50px;
-        height: 50px;
+      .custom-icon-img {
+        width: 38px;
+        height: 38px;
       }
-      
-      .web-icon-large i {
-        font-size: 1.8rem;
+      .big-phone-number {
+        font-size: 1rem;
       }
-      
-      .web-title {
-        font-size: 1.1rem;
-      }
-      
-      .web-link {
-        padding: 0.5rem 1.2rem;
-        font-size: 0.8rem;
-      }
-      
       .phone-icon-big {
         width: 50px;
         height: 50px;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
       }
-      
-      .phone-details .big-phone {
-        font-size: 1.1rem;
-      }
-      
-      .call-us-btn {
-        font-size: 0.9rem;
-        padding: 0.6rem 1rem;
-      }
-      
-      .footer-phone-row span {
-        font-size: 0.7rem;
-      }
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
     }
   </style>
 </head>
 <body>
   <div class="modern-defense-card">
-
-    <!-- HEADER - Logotip yonib-o'chadi -->
+    <!-- HEADER -->
     <div class="emblem-header">
       <div class="emblem-img">
-        <img src="123.png" width="120" alt="Gerf">
+        <img src="123.png" alt="Gerb" onerror="this.src='https://placehold.co/70x70/0a2a3a/00cc99?text=MD'">
       </div>
       <div class="title">
         <h1>
-          OʻZBEKISTON RESPUBLIKASI MUDOFAA VAZIRLIGI HARBIY-KASBIY SARALASH BOSHQARMASI
-          <span>RASMIY SAHIFALARI</span>
+          OʻZBEKISTON RESPUBLIKASI MUDOFAA VAZIRLIGI <br> HARBIY-KASBIY SARALASH BOSHQARMASI
+          
         </h1>
       </div>
     </div>
 
-    <!-- MAIN CONTENT -->
+    <!-- MAIN BUTTONS - BUTUN MAYDON BOSILADIGAN QILIB (qayeriga bossa ham ishlaydi) -->
     <div class="main-content">
       
-      <!-- 1. RASMIY VEB SAYT -->
-      
-
-      <!-- 2. TELEGRAM - YONIB-O'CHADI -->
-      <div class="social-card">
+      <!-- TELEGRAM BUTTON -->
+      <div class="action-button" data-url="https://t.me/Armygovuz" data-platform="telegram">
         <i class="fab fa-telegram"></i>
-        <div class="name"><a href="https://t.me/Armygovuz">TELEGRAM</a></div>
+        <div class="button-text">TELEGRAM </div>
       </div>
 
-      <!-- 3. INSTAGRAM - YONIB-O'CHADI -->
-      <div class="social-card">
+      <!-- INSTAGRAM BUTTON -->
+      <div class="action-button" data-url="https://www.instagram.com/Armygovuz" data-platform="instagram">
         <i class="fab fa-instagram"></i>
-        <div class="name"><a href="https://www.instagram.com/Armygovuz">INSTAGRAM</a></div>
+        <div class="button-text">INSTAGRAM </div>
       </div>
 
-      <!-- 4. YOUTUBE - YONIB-O'CHADI -->
-      <div class="social-card">
+      <!-- YOUTUBE BUTTON -->
+      <div class="action-button" data-url="https://www.youtube.com/@Armygovuz" data-platform="youtube">
         <i class="fab fa-youtube"></i>
-        <div class="name"><a href="https://www.youtube.com/@Armygovuz">YOUTUBE</a></div>
+        <div class="button-text">YOUTUBE </div>
       </div>
 
-      <!-- 5. VEB-SAYT - YONIB-O'CHADI -->
-      <div class="social-card" style="background: rgba(0, 40, 55, 0.98);">
-        <i class="fas fa-globe" style="color: #88ffaa;"></i>
-        <div class="name"><a href="https://army.gov.uz">VEB-SAYT</a></div>
-      </div>
-      
-      <!-- 6. ARIZA BERISH - 321.png rasm bilan -->
-      <div class="social-card" style="background: rgba(0, 40, 55, 0.98);">
-        <div class="custom-icon">
-          <img src="321.png" alt="Ariza icon">
-        </div>
-        <div class="name"><a href="https://my.gov.uz/uz/service/1193">ARIZA BERISH</a></div>
+      <!-- VEB-SAYT BUTTON -->
+      <div class="action-button" data-url="https://army.gov.uz" data-platform="website">
+        <i class="fas fa-globe"></i>
+        <div class="button-text">VEB-SAYT <small></small></div>
       </div>
 
-      <!-- 7. TELEFON KARTASI - Qo'ng'iroq tugmasi bilan -->
-      <div class="phone-special-card">
-        <div class="phone-icon-big">
-          <i class="fas fa-headset"></i>
-        </div>
-        <div class="phone-details">
-          <div class="phone-label">Bog‘lanish / ma'lumot</div>
-          <div class="big-phone">+998 71 269 80 19 <i class="fas fa-check-circle"></i></div>
-          <div class="big-phone">+998 50 030 80 19 <i class="fas fa-check-circle"></i></div>
-          <span style="color: #aaffdd;">Ishonch telefoni </span>
-        </div>
-        <!-- QO'NG'IROQ TUGMASI - +998500308019 raqamiga telefon qiladi -->
-        <a href="tel:+998500308019" class="call-us-btn">
-          <i class="fas fa-phone-volume"></i> Qo'ng'iroq
-        </a>
+      <!-- ARIZA BERISH BUTTON (321.png rasmi bilan) -->
+      <div class="action-button" data-url="https://my.gov.uz/uz/service/1193" data-platform="ariza">
+        <img src="321.png" class="custom-icon-img" alt="ariza" onerror="this.src='https://placehold.co/44x44/0a3a4a/00ffcc?text=📄'">
+        <div class="button-text">ARIZA BERISH <small></small></div>
       </div>
 
-    </div> <!-- .main-content -->
+      <!-- TELEFON KARTASI - QO'NG'IROQ QILISH (butun maydon bosiladi) -->
+      <div class="phone-card" data-phone="+998500308019">
+        <div class="phone-row">
+          <div class="phone-icon-big">
+            <i class="fas fa-headset"></i>
+          </div>
+          <div class="phone-details">
+            <div class="phone-label">📞 ISHONCH TELEFONI</div>
+            <div class="big-phone-number">+998 71 269 80 19</div>
+            <div class="big-phone-number" style="font-size: 1.1rem;">+998 50 030 80 19</div>
+          </div>
+        </div>
+        <div class="call-btn" id="callTriggerBtn">
+          <i class="fas fa-phone-volume"></i> QO'NG'IROQ QILISH
+        </div>
+      </div>
+
+    </div>
 
     <!-- FOOTER -->
     <div class="security-footer">
-      <span><i class="fas fa-lock"></i> Rasmiy veb-sayt | Barcha ma'lumotlar himoyalangan</span>
+      <span><i class="fas fa-shield-halved"></i> Rasmiy veb-sayt | Barcha ma'lumotlar himoyalangan</span>
       <span><i class="fas fa-code"></i> powered by ®Fuugo</span>
     </div>
+  </div>
 
-  </div> <!-- .modern-defense-card -->
+  <script>
+    // ========= YONIB UCHISH KETMA-KETLIKDA BAJARILADI =========
+    // Talab: Ijtimoiy tarmoqlar yozuvi ustiga emas, balki BUTTONNING QAYERIGA BOSSA HAM KIRADI.
+    // Barcha .action-button va telefon kartasi to'liq maydon bosilganda ignite + navigatsiya.
+    
+    // Umumiy ignite funksiyasi
+    function triggerIgniteAndNavigate(element, targetUrl, isTel = false, phoneNumber = null) {
+      if (element.classList.contains('ignite-active')) return;
+      
+      // Ignite klassini qo'shamiz -> animatsiya boshlanadi
+      element.classList.add('ignite-active');
+      
+      // Qo'shimcha uchqun effekti (vizual)
+      const spark = document.createElement('div');
+      spark.style.position = 'absolute';
+      spark.style.top = '50%';
+      spark.style.left = '50%';
+      spark.style.width = '10px';
+      spark.style.height = '10px';
+      spark.style.background = 'radial-gradient(circle, #ffcc55, #00ffcc)';
+      spark.style.borderRadius = '50%';
+      spark.style.pointerEvents = 'none';
+      spark.style.zIndex = '999';
+      spark.style.transform = 'translate(-50%, -50%)';
+      spark.style.opacity = '1';
+      element.style.position = 'relative';
+      element.appendChild(spark);
+      setTimeout(() => {
+        if (spark && spark.remove) spark.remove();
+      }, 550);
+      
+      // Animatsiya davomiyligi 700ms (CSS bilan mos)
+      setTimeout(() => {
+        if (isTel && phoneNumber) {
+          window.location.href = `tel:${phoneNumber}`;
+        } else if (targetUrl && targetUrl !== '#') {
+          window.location.href = targetUrl;
+        }
+        // Klassni olib tashlash (keyingi bosishlar uchun)
+        setTimeout(() => {
+          element.classList.remove('ignite-active');
+        }, 100);
+      }, 700);
+    }
+    
+    // 1. Barcha .action-button elementlari (Telegram, Instagram, YouTube, Veb-sayt, Ariza)
+    const actionBtns = document.querySelectorAll('.action-button');
+    actionBtns.forEach(btn => {
+      // Butun tugma bosilganda (qayeriga bossa ham) ishlaydi
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        let url = btn.getAttribute('data-url');
+        if (!url || url === '') {
+          const platform = btn.getAttribute('data-platform');
+          if (platform === 'telegram') url = 'https://t.me/Armygovuz';
+          else if (platform === 'instagram') url = 'https://www.instagram.com/Armygovuz';
+          else if (platform === 'youtube') url = 'https://www.youtube.com/@Armygovuz';
+          else if (platform === 'website') url = 'https://army.gov.uz';
+          else if (platform === 'ariza') url = 'https://my.gov.uz/uz/service/1193';
+          else url = '#';
+        }
+        if (url && url !== '#') {
+          triggerIgniteAndNavigate(btn, url, false, null);
+        }
+      });
+    });
+    
+    // 2. Telefon kartasi: butun maydon (phone-card) bosilganda qo'ng'iroq qilish
+    const phoneCard = document.querySelector('.phone-card');
+    const mainPhone = phoneCard ? phoneCard.getAttribute('data-phone') : '+998500308019';
+    
+    function handlePhoneCall(e) {
+      if (e) e.stopPropagation();
+      if (!phoneCard) return;
+      triggerIgniteAndNavigate(phoneCard, null, true, mainPhone);
+    }
+    
+    if (phoneCard) {
+      // Butun telefon kartasining istalgan joyini bosganda qo'ng'iroq
+      phoneCard.addEventListener('click', (e) => {
+        // ichidagi call-btn bosilganda ikki marta ishga tushmasligi uchun, lekin baribir ishlasin
+        // biz bir marta ishlatamiz
+        handlePhoneCall(e);
+      });
+    }
+    
+    // Ichidagi call-btn alohida bosilganda ham xuddi shu ignition bilan ishlaydi (oldini olish uchun event)
+    const callInnerBtn = document.getElementById('callTriggerBtn');
+    if (callInnerBtn) {
+      callInnerBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        handlePhoneCall(e);
+      });
+    }
+    
+    // Qo'shimcha: barcha tugmalar bosilganda "yonib uchish" ketma-ketlikda bajariladi.
+    // Ijtimoiy tarmoqlar yozuvi ustiga emas, butun button maydoni bosilganda saytga o'tadi.
+    // Shuningdek, har bir tugma oldindan yumshoq yonib turuvchi animatsiyaga ega (glowPulse).
+    
+    // Rasm yuklanmasa placeholder ishlaydi
+    console.log("Sifrovizatsiya tizimi faol | Butun tugma maydoni bosilganda yonib uchish + navigatsiya");
+  </script>
 </body>
 </html>
